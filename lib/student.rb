@@ -5,7 +5,6 @@ class Student
   def initialize(name, grade, id = nil)
     @name = name
     @grade = grade
-    @id = id
   end
 
   def self.create_table
@@ -36,7 +35,7 @@ class Student
 
     DB[:conn].execute(sql, self.name, self.grade)
 
-    self.id = "SELECT id FROM students WHERE name = self.name;"
+    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")
   end
 
   def create(attributes_hash)
