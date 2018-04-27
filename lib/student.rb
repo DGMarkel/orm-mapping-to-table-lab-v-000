@@ -16,7 +16,7 @@ class Student
         grade TEXT
       );
       SQL
-      
+
     DB[:conn].execute(sql)
   end
 
@@ -32,7 +32,8 @@ class Student
     DB[:conn].execute(sql, self.name, self.grade)
   end
 
-  def create
+  def create(attributes_hash)
+    binding.pry
   end
 
 end
