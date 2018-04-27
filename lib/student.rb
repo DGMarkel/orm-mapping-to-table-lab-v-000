@@ -33,7 +33,6 @@ class Student
   end
 
   def create(attributes_hash)
-    binding.pry
   end
 
 end
