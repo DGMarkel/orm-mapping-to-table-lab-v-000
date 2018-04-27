@@ -36,7 +36,7 @@ class Student
 
     DB[:conn].execute(sql, self.name, self.grade)
 
-    self.id = SELECT id FROM students WHERE name = self.name;
+    self.id = "SELECT id FROM students WHERE name = self.name;"
   end
 
   def create(attributes_hash)
