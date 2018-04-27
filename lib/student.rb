@@ -16,7 +16,6 @@ class Student
         grade TEXT
       );
       SQL
-      binding.pry
     DB[:conn].execute(sql)
   end
 
